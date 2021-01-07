@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Reedip Adhikary</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container"> 
+
+            <h1 class="logo">RA</h1>
+
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="index.html">About</a></li> -->
+                <li><a href="#">Projects</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+<!-- ----------------------------------------------------------------------------------------------------- -->
+<div id="allproject"></div>
+
+<div class="projecttext" >
+    <h2 class="project-heading stage">
+        <span class="box bounce">M</span><span class="box bounce">y</span>&nbsp;<span class="box bounce">P</span><span class="box bounce">r</span><span class="box bounce">o</span><span class="box bounce">j</span><span class="box bounce">e</span><span class="box bounce">c</span><span class="box bounce">t</span><span class="box bounce">s</span>
+    </h2>
+</div>
+<div class="voidbox"><h1> </h1></div>
+<div class="allprojectbox">
+
+    <div class="htmlbox">
+
+        <div class="htmltextbox">
+            <h1 class="stage">
+                <span class="box bounce">W</span><span class="box bounce">e</span><span class="box bounce">b</span>&nbsp;<span class="box bounce">P</span><span class="box bounce">r</span><span class="box bounce">o</span><span class="box bounce">j</span><span class="box bounce">e</span><span class="box bounce">c</span><span class="box bounce">t</span><span class="box bounce">s</span>
+            </h1>
+        </div>
+
+        <div class="htmlimagebox">
+
+            <div class="htmlimage1boxdiv">
+                
+                <img class="htmlimage1box" src="animeweb.png" alt="First Website I have made">
+
+                <div class="weblink1">
+                    <div class="linkbtn">
+                        <a class="btn" href="">Visit Website</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="htmlimage2boxdiv">
+
+                <img class="htmlimage2box" src="foodweb.png" alt="Second Website I have made">
+
+                <div class="weblink2">
+                    <div class="linkbtn">
+                        <a class="btn" href="">Visit Website</a>
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="pythonbox">
+
+        <div class="pythontextbox">
+            <h1 class="stage">
+                <span class="box bounce">A</span><span class="box bounce">p</span><span class="box bounce">p</span><span class="box bounce">l</span><span class="box bounce">i</span><span class="box bounce">c</span><span class="box bounce">a</span><span class="box bounce">t</span><span class="box bounce">i</span><span class="box bounce">o</span><span class="box bounce">n</span>&nbsp;<span class="box bounce">P</span><span class="box bounce">r</span><span class="box bounce">o</span><span class="box bounce">j</span><span class="box bounce">e</span><span class="box bounce">c</span><span class="box bounce">t</span><span class="box bounce">s</span>
+            </h1>
+        </div>
+
+        <div>
+            <img class="pythonimagebox" src="notexapp.png" alt="Screenshow of my windows application">
+
+            <div class="applink1">
+                <div class="linkbtn">
+                    <a class="btn" href="">Download App</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ------------------------------------------------------ -->
+
+<footer class="personallinks">
+    <a href="https://www.facebook.com/reedip.adhikary"><img src="facebook.png" width="55px" height="55px"></a>
+    <a href="https://www.instagram.com/reeeedip_/"><img src="instagram.png" width="55px" height="55px"></a>
+    <a href="https://twitter.com/ReedipAdhikary"><img src="twitter.png" width="55px" height="55px"></a>
+    <a href="https://www.linkedin.com/in/reedip-a-8a4374142/"><img src="linkdin.png" width="55px" height="55px"></a>
+</footer>
+
+
+
+    <!-- ------------------------------------------------------ -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+      $("a").on('click', function(event) {
+ 
+        if (this.hash !== "") {
+
+          event.preventDefault();
+
+          var hash = this.hash;
+    
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+    </script>
+</body>
+</html>

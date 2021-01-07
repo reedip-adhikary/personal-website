@@ -1,0 +1,301 @@
+*, 
+*::after, 
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #000000;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    background-image: url('project background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li{
+    list-style: none;
+}
+
+p, h1, h2, h3, a{
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
+/* ------------------------------------------------------------------------------------- */
+.navbar{
+    width: 100%;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    position: fixed;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.329);
+}
+.menu-items{
+    display: flex;
+    justify-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    width: 600px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a{
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #ffc420;
+}
+
+.logo{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffc420;
+}
+
+/* ------------------------------------                            text jumping                      ------------------------------------------ */
+.stage {
+    display: flex;
+}
+.box {
+    align-self: flex-end;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    transition: color 0.5s ease-in-out;
+}
+.bounce:hover {
+    animation-name: bounce-5;
+    animation-timing-function: ease;
+    color: #ffc420;
+}
+@keyframes bounce-5 {
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-30px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    57%  { transform: scale(1,1)    translateY(-7px); }
+    64%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
+
+
+.btn{
+    font-size: 2rem;
+    background: #ffc420;
+    padding-top: 0.3em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-bottom: 0.3em;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    border: 2px solid #ffc420;
+    background: #ffffff;
+    color: #ffc420;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.projecttext{
+    width: 800px;
+    max-width: 80%;
+    margin-left: 15rem;
+    position: absolute;
+    color: #ffffff;
+    z-index: 5;
+    top: 15%;
+    font-size: 2.5rem;
+    
+}
+
+.projectbg{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+.voidbox{
+    margin-bottom:25rem;
+    border: 10px solid rgba(255, 255, 255, 0);
+}
+
+.allprojectbox{
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    margin: auto;
+    /* border: 1px solid white; */
+}
+
+.htmltextbox h1{
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ffc420;
+    margin-bottom: 7rem;
+}
+
+.htmlimagebox{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+}
+
+.htmlimage1boxdiv{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.htmlimage2boxdiv{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.htmlimage1box{
+    width: 98%;
+}
+
+.htmlimage2box{
+    width: 98%;
+}
+
+.pythonbox{
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+}
+
+.pythontextbox h1{
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ffc420;
+    margin-bottom: 7rem;
+}
+
+
+.pythonimagebox{
+    width: 50%;
+    margin-bottom: 18rem;
+}
+/* ------------------------------------------------- */
+.weblink1{
+    width: 687px;
+    height: 40%;
+    position: absolute;
+    top: 45%;
+    left: 13.25%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.weblink1 a{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.weblink1:hover{
+    background: rgba(0, 0, 0, 0.473);
+    top: 40.7%;
+    opacity: 1;
+}
+/* ------------------------------------------------------- */
+.weblink2{
+    width: 687px;
+    height: 40%;
+    position: absolute;
+    top: 45%;
+    left: 50.7%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.weblink2 a{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.weblink2:hover{
+    background: rgba(0, 0, 0, 0.473);
+    top: 40.7%;
+    opacity: 1;
+}
+/* ------------------------------------------------------- */
+.applink1{
+    width: 700px;
+    height: 33.5%;
+    position: absolute;
+    top: 125%;
+    left: 13.25%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.applink1 a{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.linkbtn{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.linkbtn:hover{
+    opacity: 1;
+}
+
+.applink1:hover{
+    background: rgba(0, 0, 0, 0.473);
+    top: 115%;
+    opacity: 1;
+}
+/* ------------------------------------------------------- */
+.personallinks{
+    width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}

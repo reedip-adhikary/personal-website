@@ -1,0 +1,953 @@
+*, 
+*::after, 
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #000000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li{
+    list-style: none;
+}
+
+p, h1, h2, h3, a{
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
+/* ------------------------------------------------------------------------------------- */
+.navbar{
+    width: 100%;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    position: fixed;
+    z-index: 100;
+}
+.menu-items{
+    display: flex;
+    justify-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    width: 600px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a{
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #ffc420;
+}
+
+.logo{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffc420;
+}
+
+/* -------------------------------------------------------------------- */
+
+video{
+    height: 99vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    z-index: 0;
+}
+
+.imagehead{
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+    z-index: 1;
+    position: absolute;
+    top: -5%;
+
+}
+
+.section{
+    width: 800px;
+    max-width: 80%;
+    margin-left: 15rem;
+    position: absolute;
+    color: #ffffff;
+    z-index: 5;
+    top: 30%;
+}
+
+.section h1{
+    font-size: 5rem;
+}
+
+.nameheading{
+    margin-bottom: 4rem;
+}
+
+.section p{
+    font-size: 2rem;
+}
+
+.video-container{
+    position: relative;
+}
+
+
+/* ------------------------------------                            text jumping                      ------------------------------------------ */
+.stage {
+    display: flex;
+}
+.box {
+    align-self: flex-end;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    transition: color 0.5s ease-in-out;
+}
+.bounce:hover {
+    animation-name: bounce-5;
+    animation-timing-function: ease;
+    color: #ffc420;
+}
+@keyframes bounce-5 {
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-30px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    57%  { transform: scale(1,1)    translateY(-7px); }
+    64%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
+
+/* -----------------------------                           text and background sliding                          --------------------------------------- */
+
+.section{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px;
+
+    animation-name: section;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    transform: translateX(-250%);
+}
+
+@keyframes section{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.img1{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px;
+
+    animation-name: img1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    transform: translateX(-250%);
+}
+
+@keyframes img1{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.img2{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px;
+
+    animation-name: img2;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    transform: translateX(-250%);
+}
+
+.img10,.img20{
+    display: none;
+}
+.img30,.img40{
+    display: none;
+}
+
+@keyframes img2{
+    100%{
+        transform: translate(0);
+    }
+}
+.section p{
+    margin-bottom: 3rem;
+    margin-bottom: 3em;
+}
+
+.btn{
+    font-size: 2rem;
+    background: #ffc420;
+    padding-top: 0.3em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-bottom: 0.3em;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    border: 2px solid #ffc420;
+    background: #ffffff;
+    color: #ffc420;
+}
+
+
+/* ---------------------------------- about -------------------------------------------- */
+
+.emptyabout{
+    margin-bottom: 35vh;
+}
+.about{
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    z-index: 5;
+    color: #ffffff;
+}
+
+.about-text{
+    padding-right: 15rem;
+    margin-right: 5rem;
+    animation-name: about-text;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    transform: translateX(250%);
+}
+
+.about-heading{
+    font-size: 3rem;
+    padding-bottom: 0.15em;
+    border-bottom:4px solid #ffc320b4;
+    margin-bottom: 1em;
+}
+
+.about-para{
+    font-size: 2rem;
+    text-align: justify;
+}
+
+@keyframes about-text{
+    0%{
+        transform: translate(250%);
+    }
+    50%{
+        transform: translate(250%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.imagehead2{
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+
+}
+
+
+
+.img3{
+    animation-name: img3;
+    animation-duration: 11s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    transform: translateX(250%);
+}
+
+@keyframes img3{
+    0%{
+        transform: translate(250%);
+    }
+    50%{
+        transform: translate(250%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.img4{
+    animation-name: img4;
+    animation-duration: 12s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    transform: translateX(250%);
+}
+
+@keyframes img4{
+    0%{
+        transform: translate(250%);
+    }
+    50%{
+        transform: translate(250%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.paramar{
+    margin-bottom: 2rem;
+}
+
+.followproject, .followresume{
+    font-size: 2rem;
+}
+
+.fp, .fr{
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #ffc420;
+    transition: all 0.3s ease-in-out;
+}
+
+.fp:hover, .fr:hover{
+    border-bottom: 3px solid #ffffff;
+    color: #ffc420;
+}
+
+.fp a:hover{
+    color: #ffc420;
+}
+
+
+
+.fr a:hover{
+    color: #ffc420;
+}
+
+.uparrow{
+    display: block;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+@media all and (max-width:1521px){
+    .about{
+        left: 35%;
+    }
+
+    video{
+        margin-top: 10rem;
+        height: 75%;
+    }
+
+    .imagehead{
+        top: 0%;
+    
+    }
+    .imagehead2{
+        top: 105%;
+    
+    }
+
+    .section{
+        top: 33%;
+    }
+
+    .about-text{
+        padding-right: 10rem;
+    }
+}
+/* ------------------------------------------------------------------------------------ */
+@media all and (max-width:1310px){
+    .about{
+        top: 95%;
+        left: 35%;
+    }
+    .imagehead{
+        top: 8%;
+    
+    }
+    .emptyabout{
+        margin-bottom: 30vh;
+    }
+}
+/* ------------------------------------------------------------------------------------ */
+@media all and (max-width:1200px) and (max-height:1400px){
+
+    .imagehead{
+        top: 15%;
+        width: 90%;
+        object-fit: cover;
+        object-position: left;
+    
+    }
+
+    .img1,.img2{
+        display: none;
+    }
+    
+    .img10,.img20{
+        display: inline;
+    }
+    
+
+    .img10{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px;
+    
+        animation-name: img1;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    
+        transform: translateX(-250%);
+    }
+
+    .img20{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px;
+    
+        animation-name: img2;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    
+        transform: translateX(-250%);
+    }
+
+    .section{
+        top: 30%;
+    }
+
+    .section h1{
+        font-size: 5rem;
+    }
+    
+    .section p{
+        font-size: 2rem;
+        margin-bottom: 3em;
+    }
+
+    .emptyabout{
+        margin-bottom: 20vh;
+    }
+
+    .about{
+        top: 90%;
+        left: 30%;
+
+    }
+
+    .img3,.img4{
+        display: none;
+    }
+    
+    .img30,.img40{
+        display: inline;
+    }
+
+    .imagehead2{
+
+        width: 90%;
+        object-fit: cover;
+        object-position: right;
+        margin-left: 11rem;
+        top: 100%;
+    
+    }
+
+    .about-text{
+        padding-right: 15rem;
+        margin-right: 0rem;
+
+    }
+
+    .about{
+        top: 90%;
+        left: 30%;
+
+    }
+
+    .about h2{
+        font-size: 3rem;
+    }
+
+    .about p{
+        font-size: 2rem;
+    }
+
+    .about a{
+        font-size: 2rem;
+    }
+
+    .about .uparrow{
+        margin-top: 10rem;
+        margin-bottom: 20rem;
+    }
+
+}
+/* ------------------------------------------------------------------------------------ */
+@media all and (max-width:1160px){
+    .about{
+        top: 90%;
+        left: 35%;
+    }
+
+    .navbar{
+        display: block;
+    }
+
+    .logo{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-container{
+        display: block;
+    }
+    
+
+    .menu-items{
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+
+    .navbar a{
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .navbar a:hover{
+        color: #ffc420;
+    }
+    
+    .logo{
+        font-size: 4rem;
+        font-weight: 900;
+        color: #ffc420;
+    }
+}
+
+/* ------------------------------------------------------------------------------------ */
+@media all and (max-width:1101px){
+    .about{
+        top: 90%;
+        left: 30%;
+
+    }
+
+    .about-para{
+        font-size: 1.5rem;
+    }
+
+    .about-text{
+        padding-right: 10rem;
+        margin-right: 3rem;
+
+    }
+    .emptyabout{
+        margin-bottom: 32vh;
+    }
+
+    .img3,.img4{
+        display: none;
+    }
+    @keyframes about-text{
+        0%{
+            transform: translate(0%);
+        }
+        100%{
+            transform: translate(0);
+        }
+    }
+    
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+@media all and (max-width:1000px){
+    :root{
+        font-size: 31.25%;
+    }
+
+    .navbar{
+        position: fixed;
+        margin-top: -10rem;
+    }
+
+
+    video{
+        display: block;
+    }
+    
+    .imagehead{
+        top: 15%;
+        width: 90%;
+        object-fit: cover;
+        object-position: left;
+    
+    }
+
+    .img1,.img2{
+        display: none;
+    }
+    
+    .img10,.img20{
+        display: inline;
+    }
+    
+
+    .img10{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px;
+    
+        animation-name: img1;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    
+        transform: translateX(-250%);
+    }
+
+    .img20{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px;
+    
+        animation-name: img2;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    
+        transform: translateX(-250%);
+    }
+
+    .section{
+        top: 40%;
+    }
+
+    .section h1{
+        font-size: 10rem;
+    }
+    
+    .section p{
+        font-size: 4rem;
+        margin-bottom: 3em;
+    }
+    .section a{
+        font-size: 3rem;
+    }
+
+    .emptyabout{
+        margin-bottom: 15vh;
+    }
+
+    .img3,.img4{
+        display: none;
+    }
+    
+    .img30,.img40{
+        display: inline;
+    }
+
+    .imagehead2{
+
+        width: 90%;
+        object-fit: cover;
+        object-position: right;
+        margin-left: 19rem;
+        top: 130%;
+    
+    }
+
+    @keyframes about-text{
+        0%{
+            transform: translate(0%);
+        }
+        100%{
+            transform: translate(0);
+        }
+    }
+
+    .emptyabout{
+        margin-bottom: 32vh;
+    }
+
+    .about-text{
+        padding-right: 15rem;
+        margin-right: 0rem;
+
+    }
+
+    .about{
+        top: 120%;
+        left: 30%;
+
+    }
+
+    .about h2{
+        font-size: 8rem;
+    }
+
+    .about p{
+        font-size: 3rem;
+    }
+
+    .about a{
+        font-size: 3rem;
+    }
+
+    .about .uparrow{
+        margin-top: 25rem;
+    }
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+@media all and (max-width:721px){
+    :root{
+        font-size: 31.25%;
+    }
+
+    .navbar{
+        display: block;
+        width: 100%;
+        margin-top: 0rem;
+    }
+
+
+    video{
+        display: none;
+    }
+    
+    .imagehead{
+        top: 15%;
+        width: 90%;
+        object-fit: cover;
+        object-position: left;
+    
+    }
+
+    .img1,.img2{
+        display: none;
+    }
+    
+    .img10,.img20{
+        display: inline;
+    }
+    
+
+    .img10{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px;
+    
+        animation-name: img1;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    
+        transform: translateX(-250%);
+    }
+
+    .img20{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px;
+    
+        animation-name: img2;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    
+        transform: translateX(-250%);
+    }
+
+    .section{
+        top: 30%;
+    }
+
+    .section h1{
+        font-size: 8rem;
+    }
+    
+    .section p{
+        font-size: 3rem;
+        margin-bottom: 3em;
+    }
+
+    .emptyabout{
+        margin-bottom: 10vh;
+    }
+
+    .img3,.img4{
+        display: none;
+    }
+    
+    .img30,.img40{
+        display: inline;
+    }
+
+    .imagehead2{
+
+        width: 90%;
+        object-fit: cover;
+        object-position: right;
+        margin-left: 11rem;
+    
+    }
+
+    @keyframes about-text{
+        0%{
+            transform: translate(0%);
+        }
+        100%{
+            transform: translate(0);
+        }
+    }
+
+    .about-text{
+        padding-right: 15rem;
+        margin-right: 0rem;
+
+    }
+
+    .about{
+        top: 115%;
+        left: 30%;
+
+    }
+
+    .about h2{
+        font-size: 5rem;
+    }
+
+    .about p{
+        font-size: 2.5rem;
+    }
+
+    .about a{
+        font-size: 2.5rem;
+    }
+
+    .about .uparrow{
+        margin-top: 15rem;
+    }
+}
+/* --------------------------------------------------------------------------- */
+@media all and (max-width:500px){
+
+    .navbar{
+        margin-top: 2rem;
+    }
+    .emptyabout{
+        margin-bottom: 20vh;
+    }
+
+    .about .uparrow{
+        margin-top: 15rem;
+        margin-bottom: 50rem;
+    }
+
+    .about{
+        top: 110%;
+        left: 20%;
+
+    }
+    .about-text{
+        width: 100%;
+    }
+
+    .imagehead2{
+        margin-left: 10rem;
+    }
+}
+/* --------------------------------------------------------------------------- */
+@media all and (max-width:420px){
+
+    .emptyabout{
+        margin-bottom: 15vh;
+    }
+    .about-text{
+        width: 100%;
+    }
+
+    .imagehead2{
+        margin-left: 8rem;
+    }
+
+    .about .uparrow{
+        margin-top: 5rem;
+    }
+}
+/* --------------------------------------------------------------------------- */
+@media all and (max-width:400px){
+
+    .about h2{
+        font-size: 5rem;
+    }
+
+    .about p{
+        font-size: 2rem;
+    }
+
+    .about a{
+        font-size: 2rem;
+    }
+
+    .section{
+        margin-left: 10rem;
+        top: 30%;
+    }
+    
+    .section h1{
+        font-size: 5rem;
+    }
+    
+    .section p{
+        font-size: 2rem;
+    }
+}

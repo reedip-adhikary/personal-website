@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Reedip Adhikary</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container"> 
+
+            <h1 class="logo">RA</h1>
+
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+
+<!-- ---------------------------------------------------- intro------------------------------------------------------------------ -->
+
+    <div class="index" id="home">
+        <div class="section">
+
+            <h1 class="stage">
+                <span class="box bounce">H</span><span class="box bounce">e</span><span class="box bounce">l</span><span class="box bounce">l</span><span class="box bounce">o</span><span class="box bounce">!</span>
+            </h1>
+            <h1 class="nameheading stage">
+                <span class="box bounce">I'</span><span class="box bounce">m</span>&nbsp;<span class="box bounce">R</span><span class="box bounce">e</span><span class="box bounce">e</span><span class="box bounce">d</span><span class="box bounce">i</span><span class="box bounce">p</span>
+            </h1>
+    
+            <div>
+                <p>An UX-Designer, Web and Application Developer based in India.</p>
+            </div>
+            <a href="#about" class="btn">Let's Start</a>
+        </div>
+
+        <img class="imagehead img1" src="blue.png">
+        <img class="imagehead img2" src="pink.png">
+        <img class="imagehead img10" src="blue2.png">
+        <img class="imagehead img20" src="pink2.png">
+
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="background.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+<!-- ------------------------------------------------------   about ---------------------------------------------------------------------- -->
+
+    <section id="about" class="about">
+        <div class="emptyabout"></div>
+            <div class="about-text">
+                <h2 class="about-heading stage"><span class="box bounce">A</span><span class="box bounce">b</span><span class="box bounce">o</span><span class="box bounce">u</span><span class="box bounce">t</span>&nbsp;<span class="box bounce">M</span><span class="box bounce">e</span></h2>
+                <p class="about-para">
+                    My name is Reedip Adhikary, I'm 21 years old B-Tech student from Jain University Bangalore. 
+                </p>
+                <p class="about-para paramar">
+                    I started coding few years ago and I fell in love with it. I like taking challanges and build new stuff. I believe taking challanges helps a person to grow and increase their knowledge on that subject. 
+                    It's not just challanges, I love learning about new emerging technologies and how they work and how I can use them to make my work flow better. I also believe in teamwork, sharing ideas learning from one another, working together to build something good.
+                </p>
+                <div class="fp">
+                    <a class="followproject" href="projects.html">Click here to check out my projects</a>
+                </div>
+                <div class="fr">
+                    <a class="followresume" href="">Click here to know more about me</a>
+                </div>  
+                
+                <a class="uparrow" href="#home"><img src="up.png" width="50px"></a>
+
+            </div>
+    </section>
+
+    <img class="imagehead2 img3" src="red.png">
+    <img class="imagehead2 img4" src="yellow.png">
+    <img class="imagehead2 img30" src="red2.png">
+    <img class="imagehead2 img40" src="yellow2.png">
+
+
+
+
+
+
+
+
+
+
+
+
+    ------------------------------------------------------
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+      $("a").on('click', function(event) {
+ 
+        if (this.hash !== "") {
+
+          event.preventDefault();
+
+          var hash = this.hash;
+    
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+    </script>
+</body>
+</html>
